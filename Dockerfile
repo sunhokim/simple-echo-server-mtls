@@ -1,6 +1,6 @@
 FROM azul/zulu-openjdk-alpine:11
 
-EXPOSE 8080
+EXPOSE 8443
 
 RUN mkdir /cert
 ADD cert/identity.jks /cert/identity.jks
