@@ -139,7 +139,7 @@ openssl x509 -text -in api1.service.com.crt
 
 ### Convert pem to jks
 ```
-# 통합포탈에서 사용할 ssl 인증서 생성 및 jks 변환.
+# 서버에서 사용할 ssl 인증서 생성 및 jks 변환.
 cat api1.service.com.key api1.service.com.crt rootca.com.crt > identity.pem
 
 openssl pkcs12 -export -out identity.p12 -in identity.pem
@@ -148,7 +148,7 @@ keytool -importkeystore -srckeystore identity.p12 -srcstoretype pkcs12 -destkeys
 
 keytool -list -keystore identity.jks
 
-# 통합포탈에서 사용할 trust-store 생성.
+# 서버에서 사용할 trust-store 생성.
 keytool -v -importcert -file rootca.com.crt -alias client -keystore trust-store.jks -noprompt
 ```
 
