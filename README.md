@@ -151,13 +151,4 @@ keytool -list -keystore identity.jks
 # 서버에서 사용할 trust-store 생성.
 keytool -v -importcert -file rootca.com.crt -alias client -keystore trust-store.jks -noprompt
 ```
-| 옵션 | 필수 | 값 | 설명 |
-|---|---|---|---|
-|--kong_mode | Optional | edge
-tenant(default) | 프로비저닝 타겟 게이트웨이 정보 |
-|--run_env | Required | dev<br/>stage
-sandbox
-prod | 실행환경. 각 환경에 맞는 Property 로드함. |
-|--api_info | Conditional | <api_spec_file_path> | Api Spec Json Array File Path.<br/>해당 옵션 설정 시 industry 옵션은 무시함. |
-|--industry | Conditional | efin<br/>invest<br/>card<br/>usury | 미리 정의한 업권 별 API 스팩을 이용하여 프로비저닝함. |
-|:---|---|---|:---|
+
