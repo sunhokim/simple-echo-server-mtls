@@ -151,4 +151,6 @@ keytool -list -keystore identity.jks
 # 서버에서 사용할 trust-store 생성.
 keytool -v -importcert -file rootca.com.crt -alias client -keystore trust-store.jks -noprompt
 ```
-
+|옵션|설명|
+|---|---|
+|test|aaaa|
